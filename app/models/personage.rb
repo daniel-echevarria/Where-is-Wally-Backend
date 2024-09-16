@@ -1,0 +1,2 @@
+class Personage < ApplicationRecord
+end
