@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+charactersList = [
+  { name: 'Waldo', x: 136, y: 740 },
+  { name: 'Running Shoes', x: 650, y: 530 },
+  { name: 'Lady With A Fan', x: 1000, y: 720 }
+]
+
+charactersList.each do |char|
+  Personage.find_or_create_by(name: char[:name], x: char[:x], y: char[:y])
+end
