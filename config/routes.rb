@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'scores_top', to: 'scores#top'
   resources :personages
   resources :scores
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

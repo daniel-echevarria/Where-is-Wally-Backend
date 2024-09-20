@@ -23,6 +23,10 @@ class ScoresController < ApplicationController
     end
   end
 
+  def top
+    top = Score.where.not(time_score: nil).order(:time_score).limit(3)
+    render json: top, status: :ok
+  end
 
   private
 
